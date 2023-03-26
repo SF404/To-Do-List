@@ -7,38 +7,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-    <header>
-        <h1>To Do List</h1>
-        <span class="dateContainer" id="dateContainer"></span>
-    </header>
-    <aside>
-        <div class="addTask"><button class="createTask" onclick="createTask()">Add Task +</button></div>
+    <header class="header" id="header">
 
-    </aside>
-    <section class="container">
-        
-        <div class="controlBar" id="controlBar">
-            <div class="left">
-            <span id="taskStatus"></span><span> Task</span>
+    </header>
+
+
+    <main class="main" id="main">
+
+
+        <aside class="aside" id="aside">
+
+            <div class="greeting">
+                <p class="dateContainer" id="dateContainer"></p>
+                <span class="greet" id="greet">Good _____ </span><b class="userName" id="userName">
+                        usename</b>
+                <p><span>The Time is </span><b class="currentTimeBox" id="currentTimeBox"></b></p>
             </div>
-            <div class="right">
-                <input type="button" value="Done All">
-                <input type="button" value="Clear All">
+
+            <button class="newTaskBtn" id="newTaskBtn">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+            </button>
+
+            <div class="taskStatus">
+                <p class="taskTime" id="taskTime"></p>
+                <p class="taskDoneTime" id="taskDoneTime"></p>
             </div>
-        </div>
-        <div class="taskContainer" id="taskContainer">
-            
-            <!-- <div class="task">
-                <input type="text" class="taskContent">
-                <input type="button" value="Done" class="doneBtn">
-                <input type="button" value="Edit" class="editBtn">
-                <input type="button" value="Delete" class="deleteBtn disabled">
-            </div> -->
-        </div>
-    </section>
+
+            <div class="taskReminder" id="taskReminder">
+                <p><b>Set Reminder</b></p>
+                <form class="reminderTime" id="reminderTime"> </form>
+            </div>
+
+            <div class="history" id="history">
+                <p><b>History</b></p>
+                <div class="historyData" id="historyData">
+                    
+                </div>
+            </div>
+        </aside>
+
+
+        <section class="container" id="container">
+            <div class="actionBar" id="actionBar">
+                <span class="left"> </span>
+                <span class="right">
+                    <span class="material-symbols-outlined" id="saveData">
+                        bookmark
+                    </span>
+                    <span class="material-symbols-outlined">
+                        checklist_rtl
+                    </span>
+                    <span class="material-symbols-outlined">
+                        delete_sweep
+                    </span>
+                </span>
+            </div>
+            <div class="taskContainer" id="taskContainer">
+
+            </div>
+        </section>
+    </main>
+    <!-- Login -->
+    <form class="takeUsername" id="takeUsername" onclick="setUsername()">
+        <input type="text" id="usernameInput" class="usernameInput" placeholder="Please enter your name">
+        <input type="submit" value="Enter">
+    </form>
 </body>
 <script src="script.js"></script>
 
